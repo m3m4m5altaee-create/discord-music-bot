@@ -1,7 +1,7 @@
 {
   "name": "discord-music-bot",
   "version": "1.0.0",
-  "description": "بوت موسيقى للدسكورد بالعربي",
+  "description": "bot",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -17,4 +17,3 @@
     "node": "20.x"
   }
 }
-ك
