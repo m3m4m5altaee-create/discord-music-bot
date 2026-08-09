@@ -1,7 +1,6 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits, Partials } = require('discord.js');
 const { DisTube } = require('distube');
-const { YtDlpPlugin } = require('@distube/yt-dlp');
 
 const PREFIX = process.env.PREFIX || '!';
 
@@ -15,17 +14,13 @@ const client = new Client({
   partials: [Partials.Channel],
 });
 
-// إعداد DisTube لتشغيل الموسيقى
 client.distube = new DisTube(client, {
-  plugins: [new YtDlpPlugin()],
   emitNewSongOnly: true,
-  // خيارات وضع 24/7: ما يطلع من الروم لما تخلص القائمة أو يفضى
   leaveOnEmpty: false,
   leaveOnFinish: false,
   leaveOnStop: false,
 });
 
-// تحميل الأوامر من مجلد commands
 const fs = require('fs');
 const path = require('path');
 client.commands = new Map();
@@ -42,7 +37,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
   console.log(`✅ البوت شغال باسم: ${client.user.tag}`);
-  client.user.setActivity(`${PREFIX}ش | موسيقى`, { type: 2 }); // Listening
+  client.user.setActivity(`${PREFIX}ش | موسيقى`, { type: 2 });
 });
 
 client.on('messageCreate', async (message) => {
@@ -62,7 +57,6 @@ client.on('messageCreate', async (message) => {
   }
 });
 
-// أحداث DisTube
 client.distube
   .on('playSong', (queue, song) => {
     queue.textChannel?.send(`🎶 تشغيل الآن: **${song.name}** | \`${song.formattedDuration}\``);
