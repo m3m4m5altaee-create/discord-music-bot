@@ -10,8 +10,8 @@
   "dependencies": {
     "discord.js": "^14.14.1",
     "distube": "^5.0.0",
-    "@distube/ytdl-core": "^4.14.0",
-    "@distube/yt-dlp": "^1.0.0",
+    "@distube/ytdl-core": "^4.16.12",
+    "@distube/yt-dlp": "^2.0.1",
     "dotenv": "^16.4.5"
   },
   "engines": {
