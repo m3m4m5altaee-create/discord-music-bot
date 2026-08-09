@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits, Partials } = require('discord.js');
-const { DisTube } = require('distube');
+const { DisTube } = require('@hunghg255/distube');
 
 const PREFIX = process.env.PREFIX || '!';
 
