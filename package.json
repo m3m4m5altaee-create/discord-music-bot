@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "discord.js": "^14.14.1",
-    "@hunghg255/distube": "^4.2.3",
+    "@hunghg255/distube": "4.2.3",
     "@distube/ytdl-core": "^4.16.12",
     "dotenv": "^16.4.5"
   },
