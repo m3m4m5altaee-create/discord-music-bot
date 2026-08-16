@@ -14,11 +14,7 @@ const client = new Client({
   partials: [Partials.Channel],
 });
 
-client.distube = new DisTube(client, {
-  emitNewSongOnly: true,
-  leaveOnFinish: false,
-  leaveOnStop: false,
-});
+client.distube = new DisTube(client, 
 
 const fs = require('fs');
 const path = require('path');
