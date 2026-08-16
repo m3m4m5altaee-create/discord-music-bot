@@ -1,4 +1,4 @@
-مprocess.env.FFMPEG_PATH = require('ffmpeg-static');
+process.env.FFMPEG_PATH = require('ffmpeg-static');
 require('dotenv').config();
 
 const {
