@@ -1,4 +1,4 @@
-process.env.FFMPEG_PATH = require('ffmpeg-static');
+مprocess.env.FFMPEG_PATH = require('ffmpeg-static');
 require('dotenv').config();
 
 const {
@@ -35,7 +35,12 @@ const client = new Client({
 // DisTube
 // =========================
 
-client.distube = new DisTube(client);
+client.distube = new DisTube(client, {
+    ffmpeg: {
+        path: require('ffmpeg-static')
+    }
+});
+
 
 // =========================
 // Commands
